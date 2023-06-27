@@ -1,4 +1,4 @@
-# MountShares  
+# MountShare  
 ```
 OVERVIEW: Mount network shares the way "Connect to Server…" does
 
