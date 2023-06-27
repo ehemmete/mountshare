@@ -33,3 +33,4 @@ OPTIONS:
   --version               Show the version.
   -h, --help              Show help information.
 ```
+This project was inspired by [my previous use](https://sneakypockets.wordpress.com/2016/09/26/mounting-file-shares-based-on-ad-group-membership-using-enterprise-connect/) of [mount_shares_better.py](https://gist.github.com/pudquick/1362a8908be01e23041d).  Then I found useful information on Apple's [developer forums](https://developer.apple.com/forums/thread/94733) and a lot of help from a gist of [a library](https://gist.github.com/mosen/2ddf85824fbb5564aef527b60beb4669) to do the same things.  
