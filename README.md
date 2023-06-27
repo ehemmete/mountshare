@@ -1,4 +1,4 @@
-# MountShares  
+# MountShare  
 ```
 OVERVIEW: Mount network shares the way "Connect to Server…" does
 
@@ -7,7 +7,7 @@ Otherwise, a username and password can be passed in, or the system can prompt fo
 The various mounting and opening options are available as command line flags.
 This command should be run as the user that is mounting the share.
 
-USAGE: MountShares [<options>] <server-share-path>
+USAGE: mountshare [<options>] <server-share-path>
 
 ARGUMENTS:
   <server-share-path>     The full path to the share to mount i.e. "smb://server.domain.tld/share"
