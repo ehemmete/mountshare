@@ -12,7 +12,7 @@ import NetFS
 @main
 struct MountShares: ParsableCommand {
     static var configuration = CommandConfiguration(
-        commandName: "MountShares",
+        commandName: "mountshare",
         abstract: "Mount network shares the way \"Connect to Server…\" does",
         discussion: """
 The default usage assumes the needed credentials are in the user's keychain or the server uses Kerberos.  Otherwise, a username and password can be passed in, or the system can prompt for authentication with a GUI window.  The various mounting and opening options are available as command line flags.  This command should be run as the user that is mounting the share.

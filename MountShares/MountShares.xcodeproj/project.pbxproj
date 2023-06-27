@@ -24,7 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07AEC0722A49F5FB00A35389 /* MountShares */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MountShares; sourceTree = BUILT_PRODUCTS_DIR; };
+		07AEC0722A49F5FB00A35389 /* mountshare */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mountshare; sourceTree = BUILT_PRODUCTS_DIR; };
 		07AEC0752A49F5FB00A35389 /* MountShares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountShares.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 		07AEC0732A49F5FB00A35389 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07AEC0722A49F5FB00A35389 /* MountShares */,
+				07AEC0722A49F5FB00A35389 /* mountshare */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 				07AEC0822A4A0FC300A35389 /* ArgumentParser */,
 			);
 			productName = MountShares;
-			productReference = 07AEC0722A49F5FB00A35389 /* MountShares */;
+			productReference = 07AEC0722A49F5FB00A35389 /* mountshare */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +188,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -245,7 +245,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -256,11 +256,15 @@
 		07AEC07A2A49F5FB00A35389 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R335X53H7K;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = R335X53H7K;
 				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sneakypockets.mountshares;
+				PRODUCT_NAME = mountshare;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -268,11 +272,15 @@
 		07AEC07B2A49F5FB00A35389 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R335X53H7K;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = R335X53H7K;
 				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sneakypockets.mountshares;
+				PRODUCT_NAME = mountshare;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
