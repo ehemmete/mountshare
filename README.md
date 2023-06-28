@@ -23,7 +23,7 @@ OPTIONS:
   --nobrowse              No browsable data here (see <sys/mount.h>)
   --readonly              A read-only mount (see <sys/mount.h>)
   --allow-sub-mounts      Allow a mount from a dir beneath the share point
-  --soft-mount            Mount with "soft" failure semantics
+  --disable-soft-mount    Prevent mounting with "soft" failure semantics
   --mount-at-directory    Mount on the specified mountpath instead of below it
   --guest                 Login as a guest user
   --allow-loopback        Allow a loopback mount
