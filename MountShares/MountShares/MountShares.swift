@@ -17,7 +17,7 @@ struct MountShares: ParsableCommand {
         discussion: """
 The default usage assumes the needed credentials are in the user's keychain or the server uses Kerberos.  Otherwise, a username and password can be passed in, or the system can prompt for authentication with a GUI window.  The various mounting and opening options are available as command line flags.  This command should be run as the user that is mounting the share.
 """,
-        version: "1.0.0"
+        version: "1.0.1"
         )
     @Flag(name: .shortAndLong, help: "Print success or error message to STDOUT") var verbose: Bool = false
     @Option(name: .shortAndLong, help: "If necessary, specify a username to mount the share as.") var username: String?
@@ -26,7 +26,7 @@ The default usage assumes the needed credentials are in the user's keychain or t
     @Flag(help: "No browsable data here (see <sys/mount.h>)") var nobrowse: Bool = false
     @Flag(help: "A read-only mount (see <sys/mount.h>)") var readonly: Bool = false
     @Flag(help: "Allow a mount from a dir beneath the share point") var allowSubMounts: Bool = false
-    @Flag(help: "Mount with \"soft\" failure semantics") var softMount: Bool = false
+    @Flag(help: "Prevent mounting with \"soft\" failure semantics") var disableSoftMount: Bool = false
     @Flag(help: "Mount on the specified mountpath instead of below it") var mountAtDirectory: Bool = false
     @Flag(help: "Login as a guest user") var guest: Bool = false
     @Flag(help: "Allow a loopback mount") var allowLoopback: Bool = false
@@ -62,8 +62,8 @@ The default usage assumes the needed credentials are in the user's keychain or t
         if allowSubMounts {
             mountOptions[kNetFSAllowSubMountsKey] = true
         }
-        if softMount {
-            mountOptions[kNetFSSoftMountKey] = true
+        if disableSoftMount {
+            mountOptions[kNetFSSoftMountKey] = false
         }
         if mountAtDirectory {
             mountOptions[kNetFSMountAtMountDirKey] = true
